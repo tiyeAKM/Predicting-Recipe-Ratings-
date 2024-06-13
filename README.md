@@ -115,12 +115,26 @@ These are the columns and descriptions of the cleaned dataframe,
 
 We looked at the descriptive statistics for the merged dataset, as well as the most popular recipes and a histogram of the ratings in our dataset. Additionally, the  most common ingredients in highly rated recipes were found.
 
+<iframe
+  src="rating-dist.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ### Univariate Analysis
 
 Moving on to the Univariate Analysis of our data, in order to work with the 'minutes'data from our merged_df, the outliers needed to be removed as they create too much noise. Therefore, after finding the IQR of the mininutes column, the lower bound was -40.0 and the upper bound 120.0. There were 24291 outlier datapoints that are not included in the analysis. Extending the range of the data to twice that of the upper bound, our merged_df now includes the recipes that took at least 4 hours or less to make. This brings our new dataset to 221244 columns and 18 rows, and a boxplot of the distribution shows that the majority of datapoints lie below the 100 minute mark in recipe cook time. The average cook time appears to hover aorund 30 minutes long. 
 
 <iframe
-  src="assets/univariate.html"
+  src="boxplot_recipe_minutes.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="histogram_cook_time.html"
   width="800"
   height="600"
   frameborder="0"
@@ -138,16 +152,23 @@ In this section, we attempt to find out who has contibuted the most amount of re
   frameborder="0"
 ></iframe>
 
+### Interesting Aggregates
+
+To further uncover patterns and insights within the merged_df, the relationship between number of ingredients and the average rating was analyzed with a line plot. Our graph shows that, perhaps surprisingly, as the number of ingredients rises so too does the rating of the recipe, with recipes with over 30 ingredients having a top rating of 5. In another analysis to understand the relationship between the number of ingredients, number of steps, and the average minutes, we created a heatmap to see the effect of any influences. This heatmap is quite different from the first and shows the relationship between the number of ingredients, number of steps, and the average minutes the recipe takes.
+
 <iframe
-  src="assets/biivariate.html"
+  src="avg_rating_ingredients.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
 
-### Interesting Aggregates
-
-To further uncover patterns and insights within the merged_df, the relationship between number of ingredients and the average rating was analyzed with a line plot. Our graph shows that, perhaps surprisingly, as the number of ingredients rises so too does the rating of the recipe, with recipes with over 30 ingredients having a top rating of 5. In another analysis to understand the relationship between the number of ingredients, number of steps, and the average minutes, we created a heatmap to see the effect of any influences. This heatmap is quite different from the first and shows the relationship between the number of ingredients, number of steps, and the average minutes the recipe takes.
+<iframe
+  src="avgtime_heatmap.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 ## Assessment of Missingness
@@ -196,6 +217,14 @@ P-value: 1.0000
 **Test Statistic:** The difference in mean between rating of recipes with low and high cook times.
 
 **Significance Level:** 0.05
+
+<iframe
+  src="perm_test_hypothesis.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 #### Conclusion of Permutation Test
 
