@@ -225,7 +225,7 @@ For the final model, we are including the TF-IDF values of words from the column
 **Mean Squared Error (MSE):** 644.2737784014391
 **Root Mean Squared Error (RMSE):** 25.38254869790343
 
-Therefore, our final model was found to perform slightly better than our baseline model and the 
+Therefore, our final model was found to perform slightly better than our baseline model and showing the typical error in the model's predictions to be off by 14 minutes or 25 minutes under the RMSE.
 
 Grid Search to check for the optional hyper parameters was attempted but failed due to high computation time. Further plans for the model include modfiying the model for optimal computation times as well as adding the feature of checking key terms in all of the text feature columns. We found key terms to be words such as 'quick', 'easy', 'slow-cooked', 'gourmet', 'simple', 'few ingredients', 'one-pot', 'elaborate', 'marinate overnight'. In other words, the belief is that the inclusion of one or more of the key terms would lead our cook time prediction to be lower or higher based on the eky term. 
 
