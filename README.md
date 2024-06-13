@@ -132,7 +132,7 @@ Moving on to the Univariate Analysis of our data, in order to work with the 'min
 In this section, we attempt to find out who has contibuted the most amount of recipes with the highest ratings, as well as look at the correlation between the number of tags, ingredients, steps, and minutes. To do this, a dataframe with the top contributor id's was found and sorted by average rating. The bar graph of our distribution shows that contributor id: 37449 was the person who contributed the most and whose recipes ended up with a higher rating on avergae. To look at the correlation between the features of the number of tags, ingredients, steps, and minutes, a heatmap was created which shows a positive relationship between the number of ingredients, number of steps, ingredients, and minutes. However, a negative correlation was found between those three variables and the number of tags. 
 
 <iframe
-  src="assets/biivariate.html"
+  src="top_recipe_contributors.html"
   width="800"
   height="600"
   frameborder="0"
